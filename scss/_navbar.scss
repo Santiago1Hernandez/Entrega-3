@@ -1,0 +1,47 @@
+@import 'variables';
+@import 'mixins';
+
+nav {
+  margin-bottom: 0.1px;
+}
+
+#logo {
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color: $navbar-text-color;
+  padding: 5px 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.navbar-custom {
+  font-size: 21px;
+  background-color: $navbar-bg-color;
+  @include box-shadow(0, 4px, 6px, $navbar-shadow-color);
+
+  .navbar-nav {
+    margin-left: auto;
+
+    .nav-link {
+      color: $navbar-text-color;
+
+      &:hover {
+        color: $navbar-hover-color;
+      }
+    }
+
+    .nav-item {
+      margin-right: 20px;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $navbar-text-color;
+    background-color: $navbar-text-color;
+
+    .navbar-toggler-icon {
+      background-color: #6c757d;
+    }
+  }
+}

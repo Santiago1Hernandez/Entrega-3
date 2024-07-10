@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'mixins';
+
+.footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 20px 0;
+
+  .container {
+    @include flex-center;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .col-md-4 {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .list-inline {
+    padding-left: 0;
+    list-style: none;
+    @include flex-center;
+
+    .list-inline-item {
+      margin-right: 15px;
+
+      .social-icon,
+      .pagos-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      .pagos-icon {
+        width: 3.7rem;
+        height: 3.4rem;
+        padding: 2px;
+      }
+
+      .social-icon,
+      .pagos-icon {
+        margin: 0 5px;
+      }
+    }
+  }
+}

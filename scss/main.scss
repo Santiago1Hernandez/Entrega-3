@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'navbar';
+@import 'carrusel';
+@import 'galeria';
+@import 'footer';
+@import 'formulario';
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: $body-bg-color;
+  display: grid;
+  min-height: 100vh;
+}

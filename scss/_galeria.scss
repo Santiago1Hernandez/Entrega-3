@@ -1,0 +1,82 @@
+/*en esta parte quise hacer grids, intenté muchos metodos diferentes pero nunca pude y no se el motivo, estuve varias horas intentando pero la galeria nunca se ordenó y además el footer se desordenó también*/
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+
+}
+
+
+.c1 {
+  grid-area: c1;
+}
+
+.c2 {
+  grid-area: c2;
+}
+
+.c3 {
+  grid-area: c3;
+}
+
+.c4 {
+  grid-area: c4;
+}
+
+.c5 {
+  grid-area: c5;
+}
+
+.c6 {
+  grid-area: c6;
+}
+
+.c7 {
+  grid-area: c7;
+}
+
+.c8 {
+  grid-area: c8;
+}
+
+.c9 {
+  grid-area: c9;
+}
+
+.c10 {
+  grid-area: c10;
+}
+
+.c11 {
+  grid-area: c11;
+}
+
+.c12 {
+  grid-area: c12;
+}
+
+.product-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  h5 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 1em;
+    color: #333333;
+  }
+}
