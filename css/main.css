@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -69,82 +68,41 @@ nav {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/*en esta parte quise hacer grids, intenté muchos metodos diferentes pero nunca pude y no se el motivo, estuve varias horas intentando pero la galeria nunca se ordenó y además el footer se desordenó también*/
-.product-grid {
+body {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.c1 {
-  grid-area: c1;
+header {
+  grid-row: 1;
 }
 
-.c2 {
-  grid-area: c2;
+main {
+  background-color: #f8f9fa;
+  grid-row: 2;
+  padding: 1rem;
 }
 
-.c3 {
-  grid-area: c3;
-}
-
-.c4 {
-  grid-area: c4;
-}
-
-.c5 {
-  grid-area: c5;
-}
-
-.c6 {
-  grid-area: c6;
-}
-
-.c7 {
-  grid-area: c7;
-}
-
-.c8 {
-  grid-area: c8;
-}
-
-.c9 {
-  grid-area: c9;
-}
-
-.c10 {
-  grid-area: c10;
-}
-
-.c11 {
-  grid-area: c11;
-}
-
-.c12 {
-  grid-area: c12;
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .product-card {
-  background-color: #ffffff;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
   text-align: center;
+  background-color: #f9f9f9;
 }
+
 .product-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-.product-card h5 {
-  font-size: 1.5em;
-  margin: 10px 0;
-}
-.product-card p {
-  font-size: 1em;
-  color: #333333;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
 .footer {
@@ -195,52 +153,76 @@ nav {
   margin: 0 5px;
 }
 
-.form {
+/* Formulario de contacto */
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
 }
-.form h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+
+.contact-form h1 {
   text-align: center;
-  color: #007bff;
+  margin-bottom: 20px;
+  color: #333;
 }
-.form .input {
+
+.form-group {
   position: relative;
   margin-bottom: 20px;
 }
-.form .input input, .form .input textarea {
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  transition: border-color 0.3s ease;
 }
-.form .input input:focus, .form .input textarea:focus {
+
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: #007bff;
 }
-.form .input label {
+
+.contact-form label {
   position: absolute;
-  top: 42px;
+  top: 12px;
   left: 10px;
   color: #6c757d;
   font-size: 16px;
   transition: top 0.3s ease, font-size 0.3s ease;
 }
-.form .input input:focus ~ label,
-.form .input input:not(:placeholder-shown) ~ label,
-.form .input textarea:focus ~ label,
-.form .input textarea:not(:placeholder-shown) ~ label {
+
+.contact-form input:focus ~ label,
+.contact-form input:not(:placeholder-shown) ~ label,
+.contact-form textarea:focus ~ label,
+.contact-form textarea:not(:placeholder-shown) ~ label {
   top: -12px;
   font-size: 12px;
   color: #007bff;
 }
-.form textarea {
+
+.contact-form textarea {
   resize: none;
 }
-.form button {
+
+.contact-form button {
   width: 100%;
   padding: 12px;
   border: none;
@@ -251,8 +233,49 @@ nav {
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
-.form button:hover {
-  background-color: #0062cc;
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  padding: 20px;
+}
+
+.ayuda__titulo {
+  text-align: center;
+  padding: 15px;
+}
+
+.accordion-item {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #cacaca;
+}
+
+.accordion-header {
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.accordion-button {
+  background-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ff1493;
 }
 
 body {

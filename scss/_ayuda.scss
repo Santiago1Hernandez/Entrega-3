@@ -1,0 +1,32 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+.container {
+    padding: 20px;
+}
+.ayuda__titulo {
+    text-align: center;
+    padding: 15px;
+}
+.accordion-item {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #cacaca;
+}
+.accordion-header {
+    background-color: transparent;
+    font-weight: 600;
+}
+.accordion-button {
+    background-color: transparent;
+}
+.accordion-button:not(.collapsed) {
+    color: #ff1493;
+}
